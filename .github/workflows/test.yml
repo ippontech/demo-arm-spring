@@ -10,11 +10,12 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      #- name: setup java
-      #  uses: actions/setup-java@v2
-      #  with:
-      #    java-version: '17'
-      #- name: gradle buld
+      - name: setup java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      #- name: gradle build
       #  run: ./gradlew build
       #- name: run tests
       #  run: ./gradlew test
