@@ -19,6 +19,7 @@ class ArchitectureController(
      * Return a view-model containing CPU info.
      */
     @GetMapping( "/cpu", produces = [MediaType.APPLICATION_JSON_VALUE])
+    @ResponseBody
     suspend fun getCPUInfo(): CPUInfoVm {
         val cpu = architectureService.getCPUInfo()
         return CPUInfoVm.from(cpu)
