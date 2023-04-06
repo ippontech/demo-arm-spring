@@ -9,8 +9,8 @@ class ArmDemoApplicationTests {
 
     @Test
     fun contextLoads() {
-        // app starts
-        Assertions.assertTrue(true)
+        // fail to check github actions
+        Assertions.assertFalse(true)
     }
 
 }
