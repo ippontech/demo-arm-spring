@@ -15,10 +15,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      #- name: gradle build
-      #  run: ./gradlew build
-      #- name: run tests
-      #  run: ./gradlew test
+          cache: 'gradle'
+      - name: gradle build
+        run: ./gradlew build
+      - name: run tests
+        run: ./gradlew test
 
       - name: exit non-zero on failure.
         if: ${{ failure() }}
