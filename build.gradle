@@ -39,7 +39,11 @@ dependencies {
     runtimeOnly 'io.r2dbc:r2dbc-h2'
     runtimeOnly 'org.postgresql:postgresql'
     runtimeOnly 'org.postgresql:r2dbc-postgresql'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test") // consider excluding mockito-core to avoid confusion
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testImplementation 'io.projectreactor:reactor-test'
 }
 
